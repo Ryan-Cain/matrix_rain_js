@@ -31,11 +31,11 @@ const createRainDrop = () => {
   let windowWidthDiv = (window.innerWidth - windowMod) / 20;
 
   if (dropPositions.length < windowWidthDiv) {
-    let windowRand = Math.floor(Math.random() * 1 * 20) * windowWidthDiv;
+    let windowRand = Math.floor(Math.random() * 1 * windowWidthDiv) * 20;
     let count = 0;
     while (dropPositions.includes(windowRand) && count < 10) {
       count++;
-      windowRand = Math.floor(Math.random() * 1 * 20) * windowWidthDiv;
+      windowRand = Math.floor(Math.random() * 1 * windowWidthDiv) * 20;
     }
     dropPositions.push(windowRand);
     const newDrop = document.createElement("div");
