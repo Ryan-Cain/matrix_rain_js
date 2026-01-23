@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#grid {
+  color: green;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.drop {
+}
+
+.drop-real {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-head {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  background: linear-gradient(rgb(109, 197, 109), green);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.drop-middle {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  background: linear-gradient(white, rgb(109, 197, 109));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.drop-tail {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  background: linear-gradient(black, white);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.drop-empty {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  color: black;
+}
+
+.drop-start-marker {
+  position: relative;
+}
