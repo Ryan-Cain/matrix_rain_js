@@ -7,18 +7,15 @@ body {
 }
 
 #grid {
+  position: relative;
   color: green;
   display: flex;
   width: 100vw;
   height: 100vh;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
 .drop {
+  position: absolute;
 }
 
 .drop-real {
