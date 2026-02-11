@@ -56,11 +56,12 @@ const createRainDrop = () => {
   `;
     const grid = document.getElementById("grid");
     grid.appendChild(newDrop);
+    randomTimeout = Math.ceil(Math.random() * 6) * 1000;
+    setTimeout(() => {
+      newDrop.remove();
+      dropPositions = dropPositions.filter(
+        (position) => position == windowRand,
+      );
+    }, randomTimeout);
   }
 };
-
-// Clear grid for clarity
-// setInterval(() => {
-//   const grid = document.getElementById("grid");
-//   grid.innerHTML = "";
-// }, 10000);
