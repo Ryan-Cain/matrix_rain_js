@@ -16,13 +16,12 @@ body {
 
 .drop {
   position: absolute;
+  top: 0px;
 }
 
 .drop-real {
   display: flex;
   flex-direction: column;
-  /* text-orientation: upright;
-  writing-mode: vertical-lr; */
 }
 
 .drop-head {

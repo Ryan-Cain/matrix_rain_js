@@ -16,7 +16,7 @@ setInterval(() => {
     randomIndex = Math.floor(Math.random() * lettersToUse.length);
     dropHeadEl.innerText = lettersToUse[randomIndex];
   }
-}, 150);
+}, 100);
 
 // Add new drop to grid with random absolute position
 const createRainDrop = () => {
@@ -38,7 +38,7 @@ const createRainDrop = () => {
     newDrop.innerHTML = `
     <div class="drop-real">
       <span class="drop-empty dummy-text">D</span>
-      <span class="drop-tail drop-text">日本語にほんごはひらがなはひらがなカタカ</span>
+      <span class="drop-tail drop-text"></span>
       <span class="drop-head drop-text">ん</span>
     </div>
   `;
