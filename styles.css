@@ -17,6 +17,7 @@ body {
 .drop {
   position: absolute;
   top: 0px;
+  opacity: 1;
 }
 
 .drop-real {
@@ -47,4 +48,9 @@ body {
   writing-mode: vertical-lr;
   color: transparent;
   white-space: nowrap;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }

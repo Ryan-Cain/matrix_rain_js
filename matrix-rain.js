@@ -46,10 +46,13 @@ const createRainDrop = () => {
     grid.appendChild(newDrop);
     randomTimeout = Math.ceil(Math.random() * 6) * 1000;
     setTimeout(() => {
-      newDrop.remove();
+      newDrop.classList.add("fade-out");
       dropPositions = dropPositions.filter(
         (position) => position == windowRand,
       );
+      setTimeout(() => {
+        newDrop.remove();
+      }, 1500);
     }, randomTimeout);
   }
 };
