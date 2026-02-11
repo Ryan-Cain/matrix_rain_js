@@ -1,4 +1,5 @@
-const lettersToUse = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lettersToUse =
+  "A日本語にほんごは「ひらがな」「カタカナ」「ローマ字（じ）」「漢字（かんじ）」を使（つか）って書（か）きます。";
 let dropPositions = [];
 
 setInterval(() => {
@@ -17,7 +18,7 @@ setInterval(() => {
     newText = drop.innerText
       .split("")
       .map((letter) => {
-        randomIndex = Math.floor(Math.random() * drop.innerText.length);
+        randomIndex = Math.floor(Math.random() * lettersToUse.length);
         return lettersToUse[randomIndex];
       })
       .join("");
@@ -49,7 +50,7 @@ const createRainDrop = () => {
         <span class="drop-empty drop-text">ABDH</span>
         <span class="drop-tail drop-text">ABDUEJHFE</span>
         <span class="drop-middle drop-text">ABDUEJHF</span>
-        <span class="drop-head drop-text">ABDUEJHFEL</span>
+        <span class="drop-head drop-text">A</span>
       </div>
     </div>
   `;
