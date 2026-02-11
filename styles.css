@@ -28,7 +28,7 @@ body {
 .drop-head {
   text-orientation: upright;
   writing-mode: vertical-lr;
-  background: linear-gradient(rgb(109, 197, 109), green);
+  background: white;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -36,7 +36,7 @@ body {
 .drop-middle {
   text-orientation: upright;
   writing-mode: vertical-lr;
-  background: linear-gradient(white, rgb(109, 197, 109));
+  background: linear-gradient(rgb(109, 197, 109), green);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -44,7 +44,7 @@ body {
 .drop-tail {
   text-orientation: upright;
   writing-mode: vertical-lr;
-  background: linear-gradient(black, white);
+  background: linear-gradient(black, rgb(109, 197, 109));
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -53,6 +53,7 @@ body {
   text-orientation: upright;
   writing-mode: vertical-lr;
   color: black;
+  white-space: nowrap;
 }
 
 .drop-start-marker {
