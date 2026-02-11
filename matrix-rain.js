@@ -4,25 +4,17 @@ let dropPositions = [];
 
 setInterval(() => {
   createRainDrop();
-  const emptyTextEl = document.getElementsByClassName("dummy-text");
-  for (emptyDrop of emptyTextEl) {
-    currText = emptyDrop.innerText;
-    randomIndex = Math.floor(Math.random() * lettersToUse.length);
-    randomLetter = lettersToUse[randomIndex];
-    newText = randomLetter + currText;
-    emptyDrop.innerText = newText;
-  }
+  const dropElements = document.getElementsByClassName("drop");
+  for (drop of dropElements) {
+    emptyEl = drop.getElementsByClassName("drop-empty")[0];
+    // emptyEl.innerText = emptyEl.innerText + "A";
 
-  const dropTextEls = document.getElementsByClassName("drop-text");
-  for (drop of dropTextEls) {
-    newText = drop.innerText
-      .split("")
-      .map((letter) => {
-        randomIndex = Math.floor(Math.random() * lettersToUse.length);
-        return lettersToUse[randomIndex];
-      })
-      .join("");
-    drop.innerText = newText;
+    dropHeadEl = drop.getElementsByClassName("drop-head")[0];
+    dropTailEl = drop.getElementsByClassName("drop-tail")[0];
+
+    dropTailEl.innerText = dropTailEl.innerText + dropHeadEl.innerText;
+    randomIndex = Math.floor(Math.random() * lettersToUse.length);
+    dropHeadEl.innerText = lettersToUse[randomIndex];
   }
 }, 150);
 
@@ -44,14 +36,10 @@ const createRainDrop = () => {
 
     newDrop.style.left = `${windowRand}px`;
     newDrop.innerHTML = `
-    <span class="drop-empty dummy-text">DKFEIEH</span>
-    <div class="drop-start-marker">
-      <div class="drop-real">
-        <span class="drop-empty drop-text">ABDH</span>
-        <span class="drop-tail drop-text">ABDUEJHFE</span>
-        <span class="drop-middle drop-text">ABDUEJHF</span>
-        <span class="drop-head drop-text">A</span>
-      </div>
+    <div class="drop-real">
+      <span class="drop-empty dummy-text">D</span>
+      <span class="drop-tail drop-text">日本語にほんごはひらがなはひらがなカタカ</span>
+      <span class="drop-head drop-text">ん</span>
     </div>
   `;
     const grid = document.getElementById("grid");
@@ -65,3 +53,5 @@ const createRainDrop = () => {
     }, randomTimeout);
   }
 };
+
+createRainDrop();

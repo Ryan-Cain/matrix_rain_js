@@ -19,10 +19,10 @@ body {
 }
 
 .drop-real {
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
+  /* text-orientation: upright;
+  writing-mode: vertical-lr; */
 }
 
 .drop-head {
@@ -31,31 +31,21 @@ body {
   background: white;
   -webkit-background-clip: text;
   color: transparent;
-}
-
-.drop-middle {
-  text-orientation: upright;
-  writing-mode: vertical-lr;
-  background: linear-gradient(rgb(109, 197, 109), green);
-  -webkit-background-clip: text;
-  color: transparent;
+  white-space: nowrap;
 }
 
 .drop-tail {
   text-orientation: upright;
   writing-mode: vertical-lr;
-  background: linear-gradient(black, rgb(109, 197, 109));
+  background: linear-gradient(black, green);
   -webkit-background-clip: text;
   color: transparent;
+  white-space: nowrap;
 }
 
 .drop-empty {
   text-orientation: upright;
   writing-mode: vertical-lr;
-  color: black;
+  color: transparent;
   white-space: nowrap;
-}
-
-.drop-start-marker {
-  position: relative;
 }
